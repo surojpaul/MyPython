@@ -9,9 +9,7 @@ while True:
     if len(item_numbers) == 10:
      print("you've reached your item limit.")
      break
-total = 0
-for item in item_numbers:
-    total += item
+total = sum(item_numbers)
 print("-" * 20)
 print(f"TOTAL BILL: ${total}")
 
