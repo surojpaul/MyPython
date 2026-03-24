@@ -12,4 +12,4 @@ while True:
         print("Warning! You've crossed $100 mark!")
 print("*" * 20)
 print(f"ITEMS IN CART: {shopping_cart}")
-print(f"TOTAL BILL: {running_total}")
+print(f"TOTAL BILL: ${running_total}")
