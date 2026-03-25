@@ -7,9 +7,6 @@ while True:
     if user_input.lower() == "done":
         print("Thanks for your time.")
         break
-    if user_input == 0:
-        print(f"In {user_individual_planet_weight} your weight is 0")
-        break
     user_earth_weight = float(user_input)
     planet_name = input("Enter the name of your planet: ")
     if planet_name.lower() == "mercury":
