@@ -3,7 +3,7 @@ planet_mass = []
 planet_radius = []
 planet_name = []
 while True:
-    individual_planet_name = input("Enter the planet name: ")
+    individual_planet_name = input("Enter the name of the planet: ")
     if individual_planet_name == "done":
         print("Thanks for your time")
         break
