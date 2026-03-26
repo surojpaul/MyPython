@@ -8,12 +8,20 @@ while True:
         print("Thanks for your time")
         break
     user_input_mass = input("Enter the mass of the planet (in kg): ")
-    individual_planet_mass = float(user_input_mass) 
+    try:
+        individual_planet_mass = float(user_input_mass)
+    except ValueError:
+        print("Error!! Please enter a numeric value for mass.")
+        continue    
     if individual_planet_mass == 0:
         print(f"Escape velocity of the {individual_planet_name}  is 0")
         break
     user_input_radius = input("Enter the radius of the planet (in meters): ")
-    individual_planet_radius = float(user_input_radius)
+    try:
+        individual_planet_radius = float(user_input_radius)
+    except ValueError:
+        print("Error!! Please enter a numeric value for radius.")
+        continue    
     if individual_planet_radius == 0:
         print(f"Escape velocity of the {individual_planet_name} is infinite")
         break
