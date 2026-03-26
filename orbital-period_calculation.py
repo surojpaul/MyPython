@@ -1,5 +1,5 @@
 import math
-def calculate_orbital_period(semi_major_axis, individual_central_object_mass):
+def calculate_orbital_period_seconds(semi_major_axis, individual_central_object_mass):
     G = 6.67e-11
     orbital_period_seconds = 2 * math.pi * math.sqrt((semi_major_axis**3) / (G * individual_central_object_mass))
     return orbital_period_seconds
@@ -40,7 +40,7 @@ while True:
     if individual_central_object_mass <= 0:
         print(f"Orbital period of the {individual_celestrial_body_name} is undefined")
         break
-    orbital_period_seconds = calculate_orbital_period(semi_major_axis, individual_central_object_mass)
+    orbital_period_seconds = calculate_orbital_period_seconds(semi_major_axis, individual_central_object_mass)
     formatted_time = format_time(orbital_period_seconds)
     print(f"Orbital period of the {individual_celestrial_body_name} is {formatted_time}")
     celestrial_body_name_list.append(individual_celestrial_body_name)
