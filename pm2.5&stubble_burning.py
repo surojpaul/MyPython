@@ -25,5 +25,6 @@ ax2.tick_params(axis='y', labelcolor=color)
 lines1, labels1 = ax1.get_legend_handles_labels()
 lines2, labels2 = ax2.get_legend_handles_labels()
 ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper left')
+plt.title('Delhi Pollution vs. Stubble Burning (2020-2025)', fontsize=14)
 # Show the plot
 plt.show()
