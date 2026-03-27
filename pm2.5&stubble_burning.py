@@ -13,12 +13,13 @@ ax1.set_ylabel('PM2.5 Levels (μg/m³)', color=color)
 # Plot the WHO threshold as a horizontal line
 ax1.axhline(y=who_threshold, color='green', linestyle='--', label='WHO Threshold (5 μg/m³)')
 ax1.plot(years, pm25_levels, color=color, marker='o', label='PM2.5 Levels')
+ax1.fill_between(years, 0, who_threshold, color='green', alpha=0.1)
 ax1.tick_params(axis='y', labelcolor=color)
 # Create a second y-axis for stubble burning incidents
 ax2 = ax1.twinx()
 color = 'tab:red'
 ax2.set_ylabel('Stubble Burning Incidents', color=color)
-ax2.plot(years, stubble_burning_incidents, color=color, marker='s', label='Stubble Burning Incidents')
+ax2.bar(years, stubble_burning_incidents, color=color, alpha=0.2, width=0.3, label='Stubble Burning Incidents')
 ax2.tick_params(axis='y', labelcolor=color)
 # Add legends
 lines1, labels1 = ax1.get_legend_handles_labels()
