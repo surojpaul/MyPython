@@ -7,9 +7,8 @@ stubble_burning_incidents = np.array([80, 95, 75, 60, 55, 45])
 who_threshold = np.array([5])
 # Compute the correlation coefficient between PM2.5 levels and stubble burning incidents
 correlation = np.corrcoef(pm25_levels, stubble_burning_incidents)[0, 1]
-print(f"Correlation between PM2.5 levels and stubble burning incidents: {correlation:.2f}")
 # Plotting
-fig, ax1 = plt.subplots(figsize=(10, 6))
+fig, ax1 = plt.subplots()
 # Primary Axis: PM2.5
 color = 'tab:blue'
 ax1.set_xlabel('Year')
